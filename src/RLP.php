@@ -2,9 +2,9 @@
 
 /**
  * This file is part of rlp package.
- * 
+ *
  * (c) Kuan-Cheng,Lai <alk03073135@gmail.com>
- * 
+ *
  * @author Peter Lai <alk03073135@gmail.com>
  * @license MIT
  */
@@ -102,7 +102,7 @@ class RLP
                 throw new RuntimeException('Invalid RLP.');
             }
             $length = hexdec($hexLength);
-            $data = mb_substr($input, $llength * 2, ($length + $llength - 1) * 2);
+            $data = mb_substr($input, $llength * 2, $length * 2);
 
             if (mb_strlen($data) < $length * 2) {
                 throw new RuntimeException('Invalid RLP.');
@@ -159,7 +159,7 @@ class RLP
 
     /**
      * encodeLength
-     * 
+     *
      * @param int $length
      * @param int $offset
      * @return string
@@ -176,7 +176,7 @@ class RLP
 
     /**
      * intToHex
-     * 
+     *
      * @param int $value
      * @return string
      */
@@ -189,7 +189,7 @@ class RLP
 
     /**
      * padToEven
-     * 
+     *
      * @param string $value
      * @return string
      */
